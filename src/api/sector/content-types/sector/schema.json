@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sectors",
+  "info": {
+    "singularName": "sector",
+    "pluralName": "sectors",
+    "displayName": "Sector",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "ROJO",
+        "AMARILLO",
+        "AZUL",
+        "BLANCO",
+        "VIOLETA",
+        "ROSA"
+      ]
+    },
+    "capacity": {
+      "type": "integer"
+    },
+    "guests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guest.guest",
+      "mappedBy": "sector"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "sectors"
+    }
+  }
+}

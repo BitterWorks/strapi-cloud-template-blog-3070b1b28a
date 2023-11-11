@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guests",
+  "info": {
+    "singularName": "guest",
+    "pluralName": "guests",
+    "displayName": "Guest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "date"
+    },
+    "documentId": {
+      "type": "biginteger"
+    },
+    "documentType": {
+      "type": "enumeration",
+      "enum": [
+        "DNI",
+        "PASSPORT"
+      ]
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "sector": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sector.sector",
+      "inversedBy": "guests"
+    }
+  }
+}
