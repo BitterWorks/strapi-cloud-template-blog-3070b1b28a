@@ -22,7 +22,10 @@
       "type": "date"
     },
     "documentId": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "unique": true,
+      "min": "1000000",
+      "max": "100000000"
     },
     "documentType": {
       "type": "enumeration",
@@ -39,6 +42,10 @@
       "relation": "manyToOne",
       "target": "api::sector.sector",
       "inversedBy": "guests"
+    },
+    "accredited": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

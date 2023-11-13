@@ -26,6 +26,12 @@
       "relation": "oneToMany",
       "target": "api::sector.sector",
       "mappedBy": "event"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "event"
     }
   }
 }
