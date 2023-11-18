@@ -34,9 +34,6 @@
         "PASSPORT"
       ]
     },
-    "phone": {
-      "type": "biginteger"
-    },
     "sector": {
       "type": "relation",
       "relation": "manyToOne",
