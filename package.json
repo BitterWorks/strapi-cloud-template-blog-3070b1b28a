@@ -18,7 +18,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "reset": "strapi admin:reset-user-password --email=\"tomasqgarcia@gmail.com\" --password=\"3dCsaljk29!\""
   },
   "devDependencies": {},
   "author": {
